@@ -3,7 +3,7 @@ import path from "path";
 import { readFileSync } from "fs";
 import parse from "../src/parser.js";
 import genDiff from "../src/genDiff.js";
-import { log } from "console";
+
 
 program.description("Compares two configuration files and shows a difference.")
     .version("1.0.0")
