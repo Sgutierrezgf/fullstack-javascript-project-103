@@ -13,7 +13,7 @@ test("compare flat JSON files", () => {
     const data1 = parse(file1, getFixturePath("file1.json"));
     const data2 = parse(file2, getFixturePath("file2.json"));
 
-    // Normalizamos saltos de línea y espacios
+
     const normalize = (str) => str.replace(/\r\n/g, "\n").trim();
 
     expect(normalize(genDiff(data1, data2))).toEqual(normalize(expected));
