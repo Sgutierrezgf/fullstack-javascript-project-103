@@ -2,6 +2,8 @@ import { program } from "commander";
 import path from "path";
 import { readFileSync } from "fs";
 import parse from "../src/parser.js";
+import genDiff from "../src/genDiff.js";
+import { log } from "console";
 
 program.description("Compares two configuration files and shows a difference.")
     .version("1.0.0")
@@ -21,8 +23,15 @@ program.description("Compares two configuration files and shows a difference.")
 
         console.log("Archivo 1:", data1);
         console.log("Archivo 2:", data2);
+
+        console.log("-----------------");
+
+        console.log("Generando diff...");
+
+        const data3 = parse(file1, absolutePath1);
+        const data4 = parse(file2, absolutePath2);
+
+        const diff = genDiff(data3, data4);
+        console.log(diff);
     })
     .parse();
-
-
-
