@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95% </span>
+                <span class="strong">96.29% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/20</span>
+                <span class='fraction'>26/27</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/10</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95% </span>
+                <span class="strong">95.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/20</span>
+                <span class='fraction'>20/21</span>
             </div>
         
             
@@ -109,92 +109,92 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">172x</span>
-<span class="cline-any cline-yes">172x</span>
+<span class="cline-any cline-yes">81x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">108x</span>
-<span class="cline-any cline-yes">80x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-yes">36x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">54x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">81x</span>
+<span class="cline-any cline-yes">60x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from "lodash";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from 'lodash';
 &nbsp;
-const indent = (depth, spacesCount = 4) =&gt; {
-    const count = depth * spacesCount - 2;
-    return " ".repeat(Math.max(0, count));
-};
+const isObject = (val) =&gt; _.isPlainObject(val);
 &nbsp;
-const stringify = (data, depth) =&gt; {
-    if (!_.isPlainObject(data)) {
-        return String(data);
+const indent = (depth) =&gt; ' '.repeat(depth * 4 - 2);
+const innerIndent = (depth) =&gt; ' '.repeat(depth * 4);
+const bracketIndent = (depth) =&gt; ' '.repeat((depth - 1) * 4);
+&nbsp;
+const stringify = (value, depth) =&gt; {
+    if (!isObject(value)) {
+        return String(value);
     }
-    const entries = Object.entries(data).map(
-        ([key, val]) =&gt; `${indent(depth + 1)}  ${key}: ${stringify(val, depth + 1)}`
-    );
-    const closingIndent = indent(depth);
-    return `{\n${entries.join("\n")}\n${closingIndent}  }`;
+    const lines = Object.entries(value)
+        .map(([k, v]) =&gt; `${innerIndent(depth + 1)}${k}: ${stringify(v, depth + 1)}`);
+    return `{\n${lines.join('\n')}\n${bracketIndent(depth + 1)}}`;
 };
 &nbsp;
-const formatStylish = (tree, depth = 1) =&gt; {
-    const lines = tree.map((node) =&gt; {
-        switch (node.type) {
-            case "removed":
-                return `${indent(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
-            case "added":
-                return `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
-            case "updated":
-                return [
-                    `${indent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
-                    `${indent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`,
-                ].join("\n");
-            case "unchanged":
-                return `${indent(depth)}  ${node.key}: ${stringify(node.value, depth)}`;
-            case "nested":
-                return `${indent(depth)}  ${node.key}: ${formatStylish(node.children, depth + 1)}`;
-<span class="branch-5 cbranch-no" title="branch not covered" >            default:</span>
-<span class="cstat-no" title="statement not covered" >                throw new Error(`Unknown type: ${node.type}`);</span>
+const iter = (node, depth) =&gt; {
+    switch (node.type) {
+        case 'added':
+            return `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
+        case 'removed':
+            return `${indent(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
+        case 'unchanged':
+            return `${bracketIndent(depth)}  ${node.key}: ${stringify(node.value, depth)}`;
+        case 'updated':
+        case 'changed':
+            return [
+                `${indent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
+                `${indent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`,
+            ].join('\n');
+        case 'nested': {
+            const children = node.children.map((child) =&gt; iter(child, depth + 1)).join('\n');
+            return `${bracketIndent(depth)}  ${node.key}: {\n${children}\n${bracketIndent(depth)}  }`;
         }
-    });
-&nbsp;
-&nbsp;
-    return `{\n${lines.join("\n")}\n${indent(depth - 1)}  }`;
+<span class="branch-6 cbranch-no" title="branch not covered" >        default:</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error(`Unknown node type: ${node.type}`);</span>
+    }
 };
 &nbsp;
-export default formatStylish;
+export default (ast) =&gt; {
+    const lines = ast.map((node) =&gt; iter(node, 1)).join('\n');
+    return `{\n${lines}\n}`;
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -202,7 +202,7 @@ export default formatStylish;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-04T18:29:11.624Z
+                at 2025-09-04T18:33:17.399Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
