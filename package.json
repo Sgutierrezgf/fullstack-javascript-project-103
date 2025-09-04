@@ -9,7 +9,8 @@
     "test:watch": "jest --watch",
     "start": "node bin/gendiff.js -h",
     "gendiff": "node bin/gendiff.js files/file1.json files/file2.json",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test2": "node scripts/generateExpected.js"
   },
   "author": "segutdev",
   "license": "ISC",
