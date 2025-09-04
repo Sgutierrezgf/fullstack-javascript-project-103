@@ -1,63 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1757003495720" clover="3.2.0">
-  <project timestamp="1757003495721" name="All files">
-    <metrics statements="66" coveredstatements="63" conditionals="44" coveredconditionals="39" methods="15" coveredmethods="15" elements="125" coveredelements="117" complexity="0" loc="66" ncloc="66" packages="2" files="6" classes="6"/>
+<coverage generated="1757004194527" clover="3.2.0">
+  <project timestamp="1757004194527" name="All files">
+    <metrics statements="69" coveredstatements="65" conditionals="45" coveredconditionals="41" methods="16" coveredmethods="16" elements="130" coveredelements="122" complexity="0" loc="69" ncloc="69" packages="2" files="7" classes="7"/>
     <package name="src">
       <metrics statements="26" coveredstatements="25" conditionals="15" coveredconditionals="14" methods="5" coveredmethods="5"/>
       <file name="buildDiffTree.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\buildDiffTree.js">
         <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="30" type="stmt"/>
-        <line num="7" count="30" type="stmt"/>
-        <line num="8" count="108" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="30" type="stmt"/>
-        <line num="11" count="78" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="12" type="stmt"/>
-        <line num="14" count="66" type="cond" truecount="4" falsecount="0"/>
-        <line num="15" count="24" type="stmt"/>
-        <line num="17" count="42" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="24" type="stmt"/>
-        <line num="20" count="18" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="35" type="stmt"/>
+        <line num="7" count="35" type="stmt"/>
+        <line num="8" count="126" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="35" type="stmt"/>
+        <line num="11" count="91" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="14" count="77" type="cond" truecount="4" falsecount="0"/>
+        <line num="15" count="28" type="stmt"/>
+        <line num="17" count="49" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="28" type="stmt"/>
+        <line num="20" count="21" type="stmt"/>
       </file>
       <file name="genDiff.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\genDiff.js">
         <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="12" type="stmt"/>
-        <line num="9" count="12" type="stmt"/>
-        <line num="10" count="12" type="stmt"/>
-        <line num="13" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="9" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="13" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
       </file>
       <file name="parser.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\parser.js">
         <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="12" type="cond" truecount="3" falsecount="1"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="14" type="cond" truecount="3" falsecount="1"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.formatters">
-      <metrics statements="40" coveredstatements="38" conditionals="29" coveredconditionals="25" methods="10" coveredmethods="10"/>
+      <metrics statements="43" coveredstatements="40" conditionals="30" coveredconditionals="27" methods="11" coveredmethods="11"/>
       <file name="index.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\formatters\index.js">
-        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="9" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="12" count="6" type="stmt"/>
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="7" type="cond" truecount="3" falsecount="1"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="json.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\formatters\json.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
       </file>
       <file name="plain.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\formatters\plain.js">
         <metrics statements="16" coveredstatements="15" conditionals="16" coveredconditionals="15" methods="4" coveredmethods="4"/>
         <line num="1" count="26" type="cond" truecount="3" falsecount="0"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
         <line num="4" count="26" type="cond" truecount="2" falsecount="0"/>
         <line num="5" count="20" type="cond" truecount="2" falsecount="0"/>
         <line num="6" count="6" type="stmt"/>
-        <line num="9" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="10" count="10" type="stmt"/>
         <line num="11" count="36" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="36" type="cond" truecount="5" falsecount="1"/>
@@ -71,16 +77,16 @@
       </file>
       <file name="stylish.js" path="C:\Users\Segut\fullstack-javascript-project-103\src\formatters\stylish.js">
         <metrics statements="19" coveredstatements="18" conditionals="10" coveredconditionals="9" methods="5" coveredmethods="5"/>
-        <line num="3" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="4" count="172" type="stmt"/>
         <line num="5" count="172" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
         <line num="9" count="108" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="80" type="stmt"/>
         <line num="12" count="28" type="stmt"/>
         <line num="13" count="36" type="stmt"/>
         <line num="15" count="28" type="stmt"/>
-        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="19" count="20" type="stmt"/>
         <line num="20" count="72" type="cond" truecount="5" falsecount="1"/>
         <line num="22" count="8" type="stmt"/>

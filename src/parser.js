@@ -1,6 +1,4 @@
 import yaml from "js-yaml";
-import path from "path";
-import fs from "fs";
 
 const parse = (data, ext) => {
     switch (ext) {
@@ -13,6 +11,5 @@ const parse = (data, ext) => {
             throw new Error(`Formato no soportado: ${ext}`);
     }
 };
-
 
 export default parse;

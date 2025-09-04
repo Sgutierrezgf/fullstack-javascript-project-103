@@ -10,7 +10,7 @@
     "start": "node bin/gendiff.js -h",
     "gendiff": "node bin/gendiff.js files/file1.json files/file2.json",
     "lint": "eslint .",
-    "test2": "node scripts/generateExpectedPlain.js"
+    "test2": "node scripts/generateExpectedJson.js"
   },
   "author": "segutdev",
   "license": "ISC",

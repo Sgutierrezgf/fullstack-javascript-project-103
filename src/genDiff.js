@@ -5,9 +5,9 @@ import buildDiffTree from './buildDiffTree.js';
 import formatDiff from './formatters/index.js';
 
 const getData = (filepath) => {
-    const ext = path.extname(filepath).slice(1); // <-- extensión 'json' o 'yml'
-    const data = fs.readFileSync(filepath, 'utf-8'); // contenido del archivo
-    return parse(data, ext); // <-- pasar la extensión correcta
+    const ext = path.extname(filepath).slice(1);
+    const data = fs.readFileSync(filepath, "utf-8");
+    return parse(data, ext);
 };
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
