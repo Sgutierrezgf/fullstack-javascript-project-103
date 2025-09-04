@@ -5,12 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage --coverageReporters=text-lcov",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "test:watch": "jest --watch",
     "start": "node bin/gendiff.js -h",
     "gendiff": "node bin/gendiff.js files/file1.json files/file2.json",
     "lint": "eslint .",
-    "test2": "node scripts/generateExpected.js"
+    "test2": "node scripts/generateExpectedPlain.js"
   },
   "author": "segutdev",
   "license": "ISC",
