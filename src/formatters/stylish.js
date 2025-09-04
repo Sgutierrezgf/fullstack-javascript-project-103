@@ -12,7 +12,7 @@ const stringify = (data, depth) => {
     const entries = Object.entries(data).map(
         ([key, val]) => `${indent(depth + 1)}  ${key}: ${stringify(val, depth + 1)}`
     );
-    return `{\n${entries.join("\n")}\n${indent(depth)}  }`;
+    return `{\n${entries.join("\n")}\n${' '.repeat(depth * 4)}}`;
 };
 
 const formatStylish = (tree, depth = 1) => {
@@ -35,8 +35,9 @@ const formatStylish = (tree, depth = 1) => {
                 throw new Error(`Unknown type: ${node.type}`);
         }
     });
-    return `{\n${lines.join("\n")}\n${indent(depth - 1)}  }`;
-};
 
+    const closingIndent = depth === 1 ? "  " : indent(depth - 1) + "  ";
+    return `{\n${lines.join("\n")}\n${closingIndent}}`;
+};
 
 export default formatStylish;
