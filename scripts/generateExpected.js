@@ -11,8 +11,8 @@ const getFixturePath = (filename) => path.join(__dirname, "..", "__fixtures__", 
 // Archivos para generar expected.txt (flat)
 const flatJSON1 = getFixturePath("file1.json");
 const flatJSON2 = getFixturePath("file2.json");
-const flatYML1 = getFixturePath("file1.yml");
-const flatYML2 = getFixturePath("file2.yml");
+// const flatYML1 = getFixturePath("file1.yml");
+// const flatYML2 = getFixturePath("file2.yml");
 
 // Generar expected.txt (para flat files)
 const flatDiffJSON = genDiff(flatJSON1, flatJSON2);
