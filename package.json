@@ -12,9 +12,6 @@
     "lint": "eslint .",
     "test2": "node scripts/generateExpectedJson.js"
   },
-  "bin": {
-    "gendiff": "./bin/gendiff.js"
-  },
   "author": "segutdev",
   "license": "ISC",
   "dependencies": {
