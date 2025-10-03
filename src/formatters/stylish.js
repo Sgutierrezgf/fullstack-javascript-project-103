@@ -39,7 +39,8 @@ const formatStylish = (tree, depth = 1) => {
         }
     });
 
-    return `{\n${lines.join('\n')}\n${' '.repeat((depth - 1) * INDENT_SIZE)}}`;
+    const indent = ' '.repeat((depth - 1) * INDENT_SIZE);
+    return `{\n${lines.join('\n')}\n${indent}}`;
 };
 
 export default formatStylish;
