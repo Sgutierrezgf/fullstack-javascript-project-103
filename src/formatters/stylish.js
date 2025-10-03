@@ -37,7 +37,6 @@ const formatStylish = (tree, depth = 1) => {
         }
     });
 
-
     return `{\n${lines.join("\n")}\n${indent(depth - 1)}  }`;
 };
 
