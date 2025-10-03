@@ -9,7 +9,7 @@ export default defineConfig([
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
-        ...globals.node, // ✅ habilita process, __dirname, etc.
+        ...globals.node,
       },
     },
     plugins: {
@@ -17,8 +17,8 @@ export default defineConfig([
     },
     extends: ["js/recommended"],
     rules: {
-      // aquí puedes personalizar reglas
-      "no-unused-vars": "warn", // por ejemplo, que avise en vez de romper
+
+      "no-unused-vars": "warn",
     },
   },
 ]);
