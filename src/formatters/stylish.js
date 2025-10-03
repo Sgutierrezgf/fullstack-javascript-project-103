@@ -1,47 +1,43 @@
 import _ from "lodash";
 
-const INDENT_SIZE = 4;
+const indent = (depth, spacesCount = 4) => {
+    const count = depth * spacesCount - 2;
+    return " ".repeat(Math.max(0, count));
+};
 
-const makeIndent = (depth, sign = ' ') =>
-    ' '.repeat(depth * INDENT_SIZE - 2) + sign + ' ';
-
-const stringify = (value, depth) => {
-    if (!_.isObject(value)) {
-        return value === null ? 'null' : String(value);
+const stringify = (data, depth) => {
+    if (!_.isPlainObject(data)) {
+        return String(data);
     }
-
-    const entries = Object.entries(value).map(
-        ([key, val]) =>
-            `${' '.repeat(depth * INDENT_SIZE)}${key}: ${stringify(val, depth + 1)}`
+    const entries = Object.entries(data).map(
+        ([key, val]) => `${indent(depth + 1)}  ${key}: ${stringify(val, depth + 1)}`
     );
-
-    const closingIndent = ' '.repeat(depth * INDENT_SIZE - INDENT_SIZE);
-    return `{\n${entries.join('\n')}\n${closingIndent}}`;
+    const closingIndent = indent(depth);
+    return `{\n${entries.join("\n")}\n${closingIndent}  }`;
 };
 
 const formatStylish = (tree, depth = 1) => {
-    const lines = tree.flatMap((node) => {
+    const lines = tree.map((node) => {
         switch (node.type) {
-            case 'added':
-                return `${makeIndent(depth, '+')}${node.key}: ${stringify(node.value, depth + 1)}`;
-            case 'removed':
-                return `${makeIndent(depth, '-')}${node.key}: ${stringify(node.value, depth + 1)}`;
-            case 'unchanged':
-                return `${makeIndent(depth)}${node.key}: ${stringify(node.value, depth + 1)}`;
-            case 'updated':
+            case "removed":
+                return `${indent(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
+            case "added":
+                return `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
+            case "updated":
                 return [
-                    `${makeIndent(depth, '-')}${node.key}: ${stringify(node.oldValue, depth + 1)}`,
-                    `${makeIndent(depth, '+')}${node.key}: ${stringify(node.newValue, depth + 1)}`
-                ];
-            case 'nested':
-                return `${makeIndent(depth)}${node.key}: ${formatStylish(node.children, depth + 1)}`;
+                    `${indent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
+                    `${indent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`,
+                ].join("\n");
+            case "unchanged":
+                return `${indent(depth)}  ${node.key}: ${stringify(node.value, depth)}`;
+            case "nested":
+                return `${indent(depth)}  ${node.key}: ${formatStylish(node.children, depth + 1)}`;
             default:
                 throw new Error(`Unknown type: ${node.type}`);
         }
     });
 
-    const closingIndent = ' '.repeat(depth * INDENT_SIZE - INDENT_SIZE);
-    return `{\n${lines.join('\n')}\n${closingIndent}}`;
+    return `{\n${lines.join("\n")}\n${indent(depth - 1)}  }`;
 };
 
 export default formatStylish;
