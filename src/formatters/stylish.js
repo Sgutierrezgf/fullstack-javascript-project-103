@@ -15,7 +15,8 @@ const stringify = (value, depth) => {
             `${' '.repeat(depth * INDENT_SIZE)}${key}: ${stringify(val, depth + 1)}`
     );
 
-    return `{\n${entries.join('\n')}\n${' '.repeat((depth - 1) * INDENT_SIZE)}}`;
+    const closingIndent = ' '.repeat(depth * INDENT_SIZE - INDENT_SIZE);
+    return `{\n${entries.join('\n')}\n${closingIndent}}`;
 };
 
 const formatStylish = (tree, depth = 1) => {
@@ -39,8 +40,8 @@ const formatStylish = (tree, depth = 1) => {
         }
     });
 
-    const indent = ' '.repeat((depth - 1) * INDENT_SIZE);
-    return `{\n${lines.join('\n')}\n${indent}}`;
+    const closingIndent = ' '.repeat(depth * INDENT_SIZE - INDENT_SIZE);
+    return `{\n${lines.join('\n')}\n${closingIndent}}`;
 };
 
 export default formatStylish;
