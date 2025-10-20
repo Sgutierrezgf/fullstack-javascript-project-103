@@ -1,6 +1,6 @@
-import formatStylish from './stylish';
-import formatPlain from './plain';
-import formatJson from './json';
+import formatStylish from './stylish.js';
+import formatPlain from './plain.js';
+import formatJson from './json.js';
 
 const formatDiff = (diffTree, formatName) => {
   switch (formatName) {

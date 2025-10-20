@@ -3,7 +3,7 @@ import { program } from 'commander';
 // import path from "path";
 // import { readFileSync } from "fs";
 // import parse from "../src/parser.js";
-import genDiff from '../src/genDiff';
+import genDiff from '../src/genDiff.js';
 
 program
   .name('gendiff')

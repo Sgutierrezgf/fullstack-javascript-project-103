@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import buildDiffTree from './buildDiffTree';
-import parse from './parser';
-import formatDiff from './formatters/index';
+import buildDiffTree from './buildDiffTree.js';
+import parse from './parser.js';
+import formatDiff from './formatters/index.js';
 
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
 const getFileData = (filepath) => fs.readFileSync(getFilePath(filepath), 'utf-8');

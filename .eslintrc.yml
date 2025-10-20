@@ -12,5 +12,9 @@ parserOptions:
 rules:
   no-unused-vars: warn
   no-console: off
-  no-underscore-dangle: off    
-  no-shadow: off                
+  no-underscore-dangle: off
+  no-shadow: off
+  import/extensions:
+    - error
+    - ignorePackages
+    - js: always
