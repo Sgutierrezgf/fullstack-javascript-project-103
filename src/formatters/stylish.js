@@ -22,6 +22,7 @@ const formatStylish = (tree, depth = 1) => {
                 return `${makeIndent(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
             case "added":
                 return `${makeIndent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
+            case "changed":
             case "updated":
                 return [
                     `${makeIndent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
