@@ -16,6 +16,7 @@ const makePlain = (diffTree, path = '') => {
             case 'removed':
                 return `Property '${property}' was removed`;
             case 'updated':
+            case 'changed': // 👈 nuevo alias para compatibilidad
                 return `Property '${property}' was updated. From ${valueToString(node.oldValue)} to ${valueToString(node.newValue)}`;
             case 'nested':
                 return makePlain(node.children, property);
