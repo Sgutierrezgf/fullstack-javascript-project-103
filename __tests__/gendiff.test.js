@@ -27,13 +27,13 @@ test('compare flat YAML files', () => {
 });
 
 test('compare nested JSON/YAML files with stylish', () => {
-  const expected = readFileSync(getFixturePath('expected_nested.txt'), 'utf-8').trim();
+  const expectedNested = readFileSync(getFixturePath('expected_nested.txt'), 'utf-8').trim();
 
   const j1 = getFixturePath('file1.json');
   const j2 = getFixturePath('file2.json');
-  expect(genDiff(j1, j2).trim()).toBe(expected);
+  expect(genDiff(j1, j2).trim()).toBe(expectedNested);
 
   const y1 = getFixturePath('file1.yml');
   const y2 = getFixturePath('file2.yml');
-  expect(genDiff(y1, y2).trim()).toBe(expected);
+  expect(genDiff(y1, y2).trim()).toBe(expectedNested);
 });
