@@ -23,7 +23,7 @@ const formatStylish = (tree, depth = 1) => {
                 return `${indent(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
             case "added":
                 return `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
-            case "updated":
+            case "changed":
                 return [
                     `${indent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
                     `${indent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`,
@@ -37,7 +37,7 @@ const formatStylish = (tree, depth = 1) => {
         }
     });
 
-    return `{\n${lines.join("\n")}\n${indent(depth - 1)}  }`;
+    return `{\n${lines.join("\n")}\n${indent(depth - 1)}}`;
 };
 
 export default formatStylish;
